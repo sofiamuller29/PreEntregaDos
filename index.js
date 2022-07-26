@@ -124,3 +124,36 @@ arrayDeBotones.forEach (boton => {
         renovarStorage();
     })
 });
+
+
+
+const DateTime = luxon.DateTime
+
+const fecha = DateTime.local(2022, 7, 25, 10, 30);
+console.log("Fecha: "+ fecha.toString())
+
+const fechaDesdeObjeto1 = DateTime.fromObject(
+    {day: 22, hour: 12, month: 2 }, 
+    {zone: "America/Buenos_Aires"}
+);
+
+
+const fechaDesdeObjeto2 = DateTime.fromObject(
+    {day: 22, hour: 10, month: 2 }, 
+    {zone: "America/New_York"}
+);
+
+console.log("Fecha y hora con tz: "+ fechaDesdeObjeto1.toString());
+
+console.log("Fecha y hora con tz: "+ fechaDesdeObjeto2.toString());
+
+
+// Tiempo hasta que se vacie el carrito
+
+const Duration = luxon.Duration
+const dt = DateTime.now();
+const dur = Duration.fromObject({hours: 3, minutes: 30});
+
+console.log(dur.hours)
+console.log(dur.minutes)
+
