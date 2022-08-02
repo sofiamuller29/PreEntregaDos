@@ -157,3 +157,24 @@ const dur = Duration.fromObject({hours: 3, minutes: 30});
 console.log(dur.hours)
 console.log(dur.minutes)
 
+// Fetch y Async
+
+const contenedorComentarios = document.getElementById("comentarios")
+
+async function obtenerComentario() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/comments");
+    let data = await response.json()
+
+    console.log(data);
+    console.log(data[0].body);
+
+    data.forEach((comentario) => {
+        let columna = document.createElement("div");
+        columna.className= "col-md-3";
+        columna.innterHTML= `<p>${comentario.body}</p>`;
+        contenedorComentarios.appendChild(columna);
+    });
+}
+
+obtenerComentario()
+     
