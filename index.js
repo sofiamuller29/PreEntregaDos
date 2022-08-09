@@ -148,6 +148,9 @@ console.log("Fecha y hora con tz: "+ fechaDesdeObjeto1.toString());
 console.log("Fecha y hora con tz: "+ fechaDesdeObjeto2.toString());
 
 
+
+
+
 // Tiempo hasta que se vacie el carrito
 
 const Duration = luxon.Duration
