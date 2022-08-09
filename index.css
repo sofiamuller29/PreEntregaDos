@@ -20,3 +20,15 @@ h1 {
 h2{
     color: rgb(1, 77, 51);
 }
+
+.top-scroll {
+    background-color: blanchedalmond;
+    background-size: cover;
+    bottom: 2%;
+    right: 2%;
+    position: fixed;
+    justify-content: center;
+    font-style: normal;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 100;
+}

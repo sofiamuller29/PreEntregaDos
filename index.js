@@ -1,3 +1,29 @@
+// Toastify
+Toastify({
+    text: "Bienvenido!",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    }
+  }).showToast();
+
+
+
+  Toastify({
+    text: "Tiene alguna duda? Estamos para ayudarte!",
+    duration: 10000,
+    destination: "https://sofiamuller29.github.io/PreEntregaDos/",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", 
+    position: "left",
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function(){} 
+  }).showToast();
+
 // Clases
 
 
