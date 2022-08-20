@@ -51,7 +51,6 @@ class Carrito{
     }
 }
 
-
 // Funciones
 
 function renderCard(producto){
@@ -93,7 +92,7 @@ window.addEventListener(`DOMContentLoaded`, (event) => {
     storage.productos.forEach(producto => {
         carritoGuardado.productos.push(producto);
     })
-    console.log(carritoGuardado);
+
     limpiarCarrito();
     actualizarCarrito(carritoGuardado);
 });
@@ -152,6 +151,7 @@ arrayDeBotones.forEach (boton => {
 });
 
 
+// Fecha y hora
 
 const DateTime = luxon.DateTime
 
@@ -181,29 +181,7 @@ console.log("Fecha y hora con tz: "+ fechaDesdeObjeto2.toString());
 
 const Duration = luxon.Duration
 const dt = DateTime.now();
-const dur = Duration.fromObject({hours: 3, minutes: 30});
+const dur = Duration.fromObject({minutes: 10});
 
 console.log(dur.hours)
 console.log(dur.minutes)
-
-// Fetch y Async
-
-const contenedorComentarios = document.getElementById("comentarios")
-
-async function obtenerComentario() {
-    let response = await fetch("https://jsonplaceholder.typicode.com/comments");
-    let data = await response.json()
-
-    console.log(data);
-    console.log(data[0].body);
-
-    data.forEach((comentario) => {
-        let columna = document.createElement("div");
-        columna.className= "col-md-3";
-        columna.innterHTML= `<p>${comentario.body}</p>`;
-        contenedorComentarios.appendChild(columna);
-    });
-}
-
-obtenerComentario()
-     
